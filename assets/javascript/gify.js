@@ -65,7 +65,6 @@ function animateGif() {
 $(document).ready(function () {
     renderButtons();
 });
-
 $(document).on("click", ".movieButton", fetchMovieGifs);
 
 $(document).on("click", ".movieGif", animateGif);
