@@ -15,6 +15,7 @@ $("#add-movie").on("click", function (event) {
     event.preventDefault();
     var movie = $("#movie-input").val().trim();
     movieGifArr.push(movie);
+    console.log(movie);
     $("#movie-input").val("");
     renderButtons();
 });
@@ -35,9 +36,9 @@ function fetchMovieGifs() {
                 var newDiv = $("<div>");
                 newDiv.addClass("movieGif");
                 var newRating = $("<h6>").html("Rating: " + dataArray[i].rating);
-                var gifTitle = $("<h2>").html(dataArray[i].title.toUpperCase());
-                var br = $("<br>");
-                newDiv.append(gifTitle);
+                // var gifTitle = $("<h2>").html(dataArray[i].title.toUpperCase());
+                // var br = $("<br>");
+                // newDiv.append(gifTitle);
                 newDiv.append(newRating);
                 var newImg = $("<img>");
                 newImg.attr("src", dataArray[i].images.fixed_height_still.url);
