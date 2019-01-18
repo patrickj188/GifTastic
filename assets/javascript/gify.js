@@ -1,4 +1,4 @@
-var movieGifArr = ["Beetlejuice", "Evil Dead", "Hellboy", "Face Off", "WickerMan"];
+var movieGifArr = ["Beetlejuice", "Evil Dead", "Hellboy", "Face Off", "WickerMan", "There Will Be Blood", "Aliens", "Toy Story", "Monsters inc"];
 
 function renderButtons() {
     $("#buttonPanel").empty();
@@ -36,9 +36,6 @@ function fetchMovieGifs() {
                 var newDiv = $("<div>");
                 newDiv.addClass("movieGif");
                 var newRating = $("<h6>").html("Rating: " + dataArray[i].rating);
-                // var gifTitle = $("<h2>").html(dataArray[i].title.toUpperCase());
-                // var br = $("<br>");
-                // newDiv.append(gifTitle);
                 newDiv.append(newRating);
                 var newImg = $("<img>");
                 newImg.attr("src", dataArray[i].images.fixed_height_still.url);
